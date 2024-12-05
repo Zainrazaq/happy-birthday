@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background and Content -->
+    <div class="container">
+        <!-- Background -->
+        <div class="background"></div>
+        
+        <!-- Cake, Balloons, and Text -->
+        <div class="birthday-wish">
+            <h1>Happy Birthday, <span class="name">Sumin</span>!</h1>
+            <div class="cake">
+                <img src='Birthday.png'>
+                <div class="candles">
+                    <img src="candle.png" alt="Candle" class="candle" id="candle1">
+                    <img src="candle.png" alt="Candle" class="candle" id="candle2">
+                    <img src="candle.png" alt="Candle" class="candle" id="candle3">
+                </div>
+            </div>
+            <p class="message">Wishing you lots of love, happiness, and amazing moments!</p>
+            <div class="balloons">
+                <img src="balloon.png" alt="Balloon" class="balloon">
+                <img src="balloon.png" alt="Balloon" class="balloon">
+                <img src="balloon.png" alt="Balloon" class="balloon">
+            </div>
+            <div class="custom-audio-container">
+                <button class="play-btn" onclick="togglePlayPause()">Play</button>
+                
+                <!-- Custom Progress Bar -->
+                <div class="progress-bar-container">
+                    <input type="range" id="progress-bar" class="progress-bar" value="0" max="100" step="0.1" onchange="seekAudio(event)">
+                </div>
+                
+                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1" onchange="setVolume(this.value)">
+                <div class="audio-timer">
+                    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                </div>
+                
+            </div>
+            
+            <audio id="birthday-music" loop autoplay>
+                <source src="hbd.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            
+            
+
+    <script src="script.js"></script>
+</body>
+</html>

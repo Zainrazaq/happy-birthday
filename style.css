@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf6f6;
+    color: #333;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    height: 130vh;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(Untitled.jpg);
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+    animation: zoomIn 8s infinite alternate;
+}
+/* Animation for Background Zoom */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+.birthday-wish {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.name {
+    color: #ffcc00; /* gold color for name */
+}
+
+.cake {
+    margin-top: 30px;
+}
+
+
+.cake img {
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.cake img:hover {
+    transform: scale(1.1);
+}
+.candles {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.candle {
+    width: 30px;
+    height: 100px;
+    margin: 0 10px;
+}
+
+.balloon {
+    width: 80px;
+    height: 100px;
+    margin: 20px 10px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.message {
+    font-size: 20px;
+    margin-top: 20px;
+    font-style: italic;
+}
+/* Custom Audio Container */
+.custom-audio-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+/* Custom Audio Container */
+.custom-audio-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+
+/* Play/Pause Button */
+.play-btn {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-btn:hover {
+    background-color: #ff9900;
+}
+
+/* Volume Slider */
+.volume-slider {
+    width: 61px;
+    background-color: #ccc;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+/* Timer text */
+.audio-timer {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Optional: Style the play button for pause functionality */
+.play-btn:active {
+    background-color: #ff6600;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@media  (max-width:390px) {
+   .background{
+
+    height: 150vh;
+
+
+   }
+    .custom-audio-container {
+        width: 300px; /* For smaller screens like 390px width */
+        padding: 10px;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align the items */
+        gap: 9px;
+    }
+
+    .progress-bar-container {
+        width: 250px; /* Adjust progress bar width for smaller screens */
+    }
+
+    .play-btn {
+        font-size: 14px; /* Smaller button size */
+        padding: 8px 16px;
+    }
+
+    .volume-slider {
+        width: 50px; /* Smaller volume slider */
+    }
+
+    .audio-timer {
+        font-size: 12px; /* Adjust timer text size */
+    }
+
+}
+
+@media  (max-width:300px) {
+   .background{
+
+    height: 170vh;
+    
+    
+}
+}
+@media screen and (max-width: 300px) {
+    .custom-audio-container {
+        width: 250px; /* For very small screens */
+        padding: 8px;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align the items */
+        gap: 10px;
+    }
+
+    .progress-bar-container {
+        width: 200px; /* Adjust width for even smaller screens */
+    }
+
+    .play-btn {
+        font-size: 12px; /* Smaller button size for very small screens */
+        padding: 6px 12px;
+    }
+
+    .volume-slider {
+        width: 80px; /* Smaller volume slider for very small screens */
+    }
+
+    .audio-timer {
+        font-size: 10px; /* Smaller timer text */
+    }
+
+}

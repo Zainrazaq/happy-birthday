@@ -1,0 +1,10 @@
+
+
+.cake img {
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.cake img:hover {
+    transform: scale(1.1);
+}
